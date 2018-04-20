@@ -1,0 +1,1 @@
+# fidelia-plugin-word-server
