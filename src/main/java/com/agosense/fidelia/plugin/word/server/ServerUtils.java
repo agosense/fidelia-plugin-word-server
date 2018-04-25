@@ -47,8 +47,7 @@ final class ServerUtils {
 
                 FideliaApplicationApi api = RestApiManager.instance().create(
                         exchange.getRequestHeaders().get("X-Forwarded-Proto").get(0),
-                        //exchange.getRequestHeaders().get("X-Forwarded-Server").get(0)
-                        "localhost",
+                        exchange.getRequestHeaders().get("X-Forwarded-Server").get(0),
                         exchange.getRequestHeaders().get("X-Forwarded-Port").get(0),
                         exchange.getRequestHeaders().get("DOMAIN").get(0),
                         exchange.getRequestHeaders().get("API-TOKEN").get(0));
