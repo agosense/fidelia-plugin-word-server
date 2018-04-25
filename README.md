@@ -1,3 +1,4 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 # fidelia-plugin-word-server
 ## Overview
 This project provides the server component for the agosense.fidelia word plugin as a standalone HTTP server that can:
