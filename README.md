@@ -25,5 +25,10 @@ The server can be started by running the following command:
 ```
 java -jar server-x.y.z.jar
 ``` 
+
+## Known issues
+* The used Library opensagres xdocreport for converting the word file does not support charts, so this plugin cannot import charts into agosense.fidelia
+* Some docx Documents can cause problems while importing them. Loading them in MS Word and saving them again will solve the problem.
+
 ## License
 This project is licensed under GPLv3, which means you can freely distribute and/or modify the source code, as long as you share your changes with us
