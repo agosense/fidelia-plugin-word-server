@@ -1,5 +1,6 @@
 package com.agosense.fidelia.plugin.word.server;
 
+import com.google.common.io.Resources;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
@@ -174,6 +175,22 @@ class XHTMLParser extends DefaultHandler {
     @Override
     public InputSource resolveEntity(String publicId, String systemId) throws IOException, SAXException {
 
+        if ("-//W3C//DTD XHTML 1.0 Transitional//EN".equals(publicId)) {
+            LOGGER.info("loading XHTML transitional");
+            return new InputSource(Resources.getResource("xhtml1-transitional.dtd").openStream());
+        }
+        if ("-//W3C//ENTITIES Latin 1 for XHTML//EN".equals(publicId)) {
+            LOGGER.info("loading XHTML latin 1");
+            return new InputSource(Resources.getResource("xhtml-lat1.ent").openStream());
+        }
+        if ("-//W3C//ENTITIES Special for XHTML//EN".equals(publicId)) {
+            LOGGER.info("loading XHTML special");
+            return new InputSource(Resources.getResource("xhtml-special.ent").openStream());
+        }
+        if ("-//W3C//ENTITIES Symbols for XHTML//EN".equals(publicId)) {
+            LOGGER.info("loading XHTML symbol");
+            return new InputSource(Resources.getResource("xhtml-symbol.ent").openStream());
+        }
         // This will avoid complains about missing DTDs in the temporary location
         return new InputSource(new StringReader(""));
     }
