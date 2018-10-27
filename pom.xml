@@ -6,7 +6,7 @@
 
     <groupId>com.agosense.fidelia.plugin.word</groupId>
     <artifactId>server</artifactId>
-    <version>1.8.13</version>
+    <version>1.8.15</version>
     <name>agosense.fidelia plugin word server</name>
     <organization>
         <name>agosense GmbH</name>
